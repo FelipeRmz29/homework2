@@ -1,7 +1,3 @@
-El archivo `README.md` que te proporcioné anteriormente ya estaba en **formato Markdown** optimizado para GitHub. Simplemente tienes que **copiar todo el código** y pegarlo en el archivo `README.md` de tu repositorio.
-
-Aquí está el código completo de nuevo, listo para **copiar y pegar**, respetando las estructuras de encabezados, tablas y listas que deseas:
-
 ````markdown
 # 🧟‍♂️ Zombie Process Handler
 
