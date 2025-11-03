@@ -1,16 +1,5 @@
 ````markdown
-# 🧟‍♂️ Zombie Process Handler
 
-[![Build Status](https://img.shields.io/badge/Status-Complete-brightgreen)](https://github.com/tu_usuario/tu_repo)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Language](https://img.shields.io/badge/Language-C--99-blue)](https://en.wikipedia.org/wiki/C99)
-
----
-
-## 👤 Información del Autor
-
-| Concepto | Valor |
-| :--- | :--- |
 | **Nombre Completo** | **Luis Felipe Ramírez Torres** |
 | **Matrícula** | 5125519 |
 
