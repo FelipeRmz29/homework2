@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -40,7 +41,7 @@ void log_message(const char *message) {
  * @brief Manejador de la señal SIGCHLD para cosechar automáticamente a los hijos.
  * Es crucial para evitar zombies.
  */
-void sigchld_handler(int sig) {
+void sigchld_handler(int /*sig*/) {
     int status;
     pid_t pid;
     
@@ -82,7 +83,7 @@ void setup_sigchld_reaper(void) {
 /**
  * @brief Manejador de la señal SIGTERM para un apagado ordenado.
  */
-void sigterm_handler(int sig) {
+void sigterm_handler(int /*sig*/) {
     keep_running = 0; // Detiene el bucle principal
     log_message("Received SIGTERM. Shutting down gracefully...");
 }

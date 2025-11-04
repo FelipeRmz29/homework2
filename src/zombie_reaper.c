@@ -40,7 +40,7 @@ void reap_explicit(void) {
  * @brief Manejador de la señal SIGCHLD. 
  * Se ejecuta de forma asíncrona cuando un hijo termina.
  */
-void sigchld_handler(int sig) {
+void sigchld_handler(int /*sig*/) {
     int status;
     pid_t pid;
 

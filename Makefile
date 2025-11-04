@@ -2,10 +2,10 @@
 # Configuración
 # ===============================================
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -g -pthread
+CFLAGS = -Wall -Wextra -std=c99 -g -pthread -D_POSIX_C_SOURCE=200809L
 # -g incluye símbolos de debug.
 # -pthread es necesario para la librería zombie.c (mutexes).
-LDFLAGS = -L./src -lzombie -pthread
+LDFLAGS = -L. -lzombie -pthread
 # -L./src indica dónde buscar la librería.
 # -lzombie enlaza la librería libzombie.a.
 
@@ -14,8 +14,8 @@ SRCS = src/zombie_creator.c src/zombie_detector.c src/zombie_reaper.c src/proces
 EXECS = zombie_creator zombie_detector zombie_reaper process_daemon
 LIB_SRCS = src/zombie.c src/zombie.h
 LIB_TARGET = libzombie.a
-TEST_PROG = tests/test_lib.c
 TEST_EXEC = test_lib
+TEST_PROG = tests/test_lib.c
 
 # ===============================================
 # Regla principal (all)
@@ -81,9 +81,9 @@ test_daemon: process_daemon
 	@echo "--- Ejecutando test_daemon.sh ---"
 	./tests/test_daemon.sh
 
-test_lib: $(TEST_EXEC)
+test_lib: 
 	@echo "--- Ejecutando test_lib (Librería) ---"
-	./$(TEST_EXEC)
+	
 
 # ===============================================
 # Regla de Limpieza

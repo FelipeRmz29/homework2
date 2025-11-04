@@ -20,7 +20,7 @@ typedef struct {
  * @return Tiempo total de CPU en segundos, o -1 en caso de error.
  */
 long get_cputime_seconds(int pid) {
-    char stat_path[256];
+    char stat_path[300];
     FILE *fp;
     long utime, stime;
     long Hertz = sysconf(_SC_CLK_TCK);
@@ -97,7 +97,7 @@ int find_zombies(zombie_info_t *zombie_list, int max_zombies) {
             char state;
 
             // 3. Construir la ruta a /proc/[pid]/stat
-            sprintf(stat_path, "/proc/%s/stat", entry->d_name);
+            snprintf(stat_path, sizeof(stat_path),"/proc/%s/stat", entry->d_name);
             fp = fopen(stat_path, "r");
 
             if (fp) {

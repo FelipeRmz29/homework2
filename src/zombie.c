@@ -12,7 +12,7 @@ static pthread_mutex_t stats_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // --- Signal Handler para la cosecha automática ---
 
-void sigchld_handler(int sig) {
+void sigchld_handler(int /*sig*/) {
     int status;
     pid_t pid;
     int reaped_count = 0;
